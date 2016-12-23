@@ -4,9 +4,15 @@
         $scope.nav = function(){
                 $state.go("app.guitarras")
         }
-        console.log("works");      
+        console.log("works");
     })
     .controller("guitarrasController",function(){
-        console.log("1111");      
+      this.guitarras = [
+                        {'id' : '1' , 'nombre':'Arroz F', 'valor':'260000' ,    'url':'img/arroz.jpg'},
+                        {'id' : '2' , 'nombre':'Leche',   'valor':'300000' ,    'url':'img/arroz.jpg'},
+                        {'id' : '3' ,'nombre':'Panela',   'valor':'12000' ,     'url':'img/arroz.jpg'},
+                        {'id' : '4' ,'nombre':'Cafe',     'valor':'266000000' , 'url':'img/arroz.jpg'},
+                        {'id' : '5' ,'nombre':'vive 100', 'valor':'20000' ,     'url':'img/arroz.jpg'}
+                      ];
     })
 })();
