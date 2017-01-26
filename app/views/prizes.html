@@ -1,5 +1,11 @@
 <section id="tabla" class="tabla">
+
+  {{greeting}}
     <div class="contenedor">
+      <figure class="img-thumb">
+        <img ng-src="{{img}}" alt="{{img}}">
+      </figure>
+
         <table>
             <thead>
                 <tr>
@@ -8,21 +14,11 @@
                     <th>Descrición</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody ng-repeat="guitarr in guitarras">
                 <tr>
-                    <td>Invie classic</td>
-                    <td>$100000</td>
-                    <td>super guitarra</td>
-                </tr>
-                <tr>
-                    <td>Invie classic</td>
-                    <td>$100000</td>
-                    <td>super guitarra</td>
-                </tr>
-                <tr>
-                    <td>Invie classic</td>
-                    <td>$100000</td>
-                    <td>super guitarra</td>
+                    <td>{{guitarr.nombre}}</td>
+                    <td>{{guitarr.valor}}</td>
+                    <td>{{guitarr.descripcion}}</td>
                 </tr>
             </tbody>
         </table>

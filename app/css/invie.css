@@ -131,6 +131,12 @@ input:focus,textarea:focus{
   bottom: 90px;
 }
 
+.img-thumb img
+{
+  width: 100px;
+  height: auto;
+}
+
 .button{
   border-radius: 12px;
   border: none;

@@ -7,16 +7,27 @@
                     templateUrl: "app/views/app.html",
                     controller: "appController"
                 })
-                .state('precios', {
+                .state('app.precios', {
                     url: "/precios",
-                    templateUrl: 'app/views/prizes.html',
-                    controller: "guitarrasController"
+                    views:{
+                      "content":{
+                           templateUrl: 'app/views/prizes.html',
+                           controller: "guitarrasController"
+                      },
+                      "banner":{
+                           templateUrl: 'app/views/header.html'
+                      },
+                      "footer":{
+                           templateUrl: 'app/views/footer.html'
+                      }
+
+                    }
                 })
                 .state('home', {
                     url: "/home",
                     templateUrl: "app/views/home.html",
                     controller: "appController"
                 })
-            $urlRouterProvider.otherwise("/home");
+            $urlRouterProvider.otherwise("/app/precios");
         });
 })();
