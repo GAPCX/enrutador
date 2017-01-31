@@ -14,7 +14,7 @@
                            templateUrl: 'app/views/prizes.html',
                            controller: "guitarrasController"
                       },
-                      "banner":{
+                      "header":{
                            templateUrl: 'app/views/header.html'
                       },
                       "footer":{
@@ -28,6 +28,6 @@
                     templateUrl: "app/views/home.html",
                     controller: "appController"
                 })
-            $urlRouterProvider.otherwise("/app/precios");
+            $urlRouterProvider.otherwise("/home");
         });
 })();
